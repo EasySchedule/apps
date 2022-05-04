@@ -1008,25 +1008,6 @@
       ]
     },
     {
-      "type": 1,
-      "title": "Caddy",
-      "description": "Open-source web server with automatic HTTPS written in Go",
-      "categories": [
-        "webserver"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-      "image": "caddy:latest",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        }
-      ]
-    },
-    {
       "categories": [
         "Cloud",
         "Books"
@@ -2232,63 +2213,6 @@
     },
     {
       "type": 1,
-      "title": "Domoticz",
-      "name": "Domoticz",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/domoticz/config</p>",
-      "description": "[Domoticz](https://www.domoticz.com) is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device.",
-      "categories": [
-        "Automation"
-      ],
-      "platform": "linux",
-      "logo": "https://github.com/domoticz/domoticz/raw/master/www/images/logo.png",
-      "image": "linuxserver/domoticz:latest",
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1024",
-          "description": "for UserID"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100",
-          "description": "for GroupID"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "default": "Europe/Amsterdam",
-          "description": "Specify a timezone to use for example Europe/Amsterdam"
-        },
-        {
-          "name": "WEBROOT",
-          "label": "WEBROOT",
-          "default": "domoticz",
-          "description": "Sets webroot to domoticz for usage with subfolder reverse proxy. Not needed unless reverse proxying."
-        },
-        {
-          "name": "DBASE",
-          "label": "DBASE",
-          "default": "<path to database>",
-          "description": "Sets path to database. Do not set unless you know what this does."
-        }
-      ],
-      "ports": [
-        "8080:8080/tcp",
-        "6144:6144/tcp",
-        "1443:1443/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/volume1/docker/domoticz/config"
-        }
-      ],
-      "restart_policy": "unless-stopped"
-    },
-    {
-      "type": 1,
       "title": "Doplarr",
       "name": "Doplarr",
       "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/doplarr/config</p>",
@@ -2575,25 +2499,6 @@
       "title": "Drupal",
       "type": 3,
       "note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://www.drupal.org/\" target=\"_blank\">https://www.drupal.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://www.drupal.org/docs/develop/local-server-setup/docker-development-environments/docker-with-solr-cloud-integration/docker-configuration\" target=\"_blank\">https://www.drupal.org/docs/develop/local-server-setup/docker-development-environments/docker-with-solr-cloud-integration/docker-configuration</a><br><br><b>Pre-installation script must be RAN before you install: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_drupal.sh\" target=\"_blank\">install_drupal.sh</a><br><br>"
-    },
-    {
-      "type": 1,
-      "title": "Drupal",
-      "description": "Open-source content management framework",
-      "categories": [
-        "CMS"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/drupal.png",
-      "image": "drupal:latest",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/www/html"
-        }
-      ]
     },
     {
       "categories": [
@@ -2986,31 +2891,6 @@
         }
       ],
       "restart_policy": "unless-stopped"
-    },
-    {
-      "type": 1,
-      "title": "File browser",
-      "description": "A web file manager",
-      "note": "Default credentials: admin/admin",
-      "categories": [
-        "filesystem",
-        "storage"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
-      "image": "filebrowser/filebrowser:latest",
-      "ports": [
-        "80/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/data"
-        },
-        {
-          "container": "/srv"
-        }
-      ],
-      "command": "--port 80 --database /data/database.db --root /srv"
     },
     {
       "categories": [
@@ -4906,31 +4786,6 @@
       ]
     },
     {
-      "type": 1,
-      "title": "MariaDB",
-      "description": "Performance beyond MySQL",
-      "categories": [
-        "database"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
-      "image": "mariadb:latest",
-      "env": [
-        {
-          "name": "MYSQL_ROOT_PASSWORD",
-          "label": "Root password"
-        }
-      ],
-      "ports": [
-        "3306/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/var/lib/mysql"
-        }
-      ]
-    },
-    {
       "type": 3,
       "title": "MariaDB Backups",
       "name": "mariadb_backup",
@@ -5082,40 +4937,6 @@
       "volumes": [
         {
           "container": "/minecraft"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "McMyAdmin 2",
-      "name": "mcmyadmin2",
-      "description": "McMyAdmin 2 is the leading web control panel and administration console for Minecraft servers.",
-      "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mcmyadmin-icon.png",
-      "image": "linuxserver/mcmyadmin2:latest",
-      "categories": [
-        "Other"
-      ],
-      "platform": "linux",
-      "restart_policy": "unless-stopped",
-      "ports": [
-        "8080:8080/tcp",
-        "25565:25565/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/minecraft"
-        }
-      ],
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1000"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100"
         }
       ]
     },
@@ -8210,26 +8031,6 @@
     },
     {
       "type": 1,
-      "title": "Redmine",
-      "description": "Open-source project management tool",
-      "note": "Default user and password are admin/admin",
-      "categories": [
-        "project-management"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
-      "image": "redmine:latest",
-      "ports": [
-        "3000/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/usr/src/redmine/files"
-        }
-      ]
-    },
-    {
-      "type": 1,
       "title": "Registry",
       "description": "Docker image registry",
       "categories": [
@@ -8330,55 +8131,6 @@
           "container": "/downloads"
         }
       ]
-    },
-    {
-      "type": 1,
-      "title": "Resilio-sync",
-      "name": "Resilio-sync",
-      "note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/resilio-sync/config<br>mkdir -p /volume1/docker/resilio-sync/downloads<br>mkdir -p /volume1/docker/resilio-sync/sync</p>",
-      "description": "[Resilio-sync](https://www.resilio.com/individuals/) (formerly BitTorrent Sync) uses the BitTorrent protocol to sync files and folders between all of your devices. There are both free and paid versions, this container supports both. There is an official sync image but we created this one as it supports user mapping to simplify permissions for volumes.",
-      "platform": "linux",
-      "logo": "https://www.resilio.com/img/individual/freeproduct.jpg",
-      "image": "linuxserver/resilio-sync:latest",
-      "env": [
-        {
-          "name": "PUID",
-          "label": "PUID",
-          "default": "1024",
-          "description": "for UserID"
-        },
-        {
-          "name": "PGID",
-          "label": "PGID",
-          "default": "100",
-          "description": "for GroupID"
-        },
-        {
-          "name": "TZ",
-          "label": "TZ",
-          "default": "Europe/Amsterdam",
-          "description": "Specify a timezone to use for example Europe/Amsterdam"
-        }
-      ],
-      "ports": [
-        "8888:8888/tcp",
-        "55555:55555/tcp"
-      ],
-      "volumes": [
-        {
-          "container": "/config",
-          "bind": "/volume1/docker/resilio-sync/config"
-        },
-        {
-          "container": "/downloads",
-          "bind": "/volume1/docker/resilio-sync/downloads"
-        },
-        {
-          "container": "/sync",
-          "bind": "/volume1/docker/resilio-sync/sync"
-        }
-      ],
-      "restart_policy": "unless-stopped"
     },
     {
       "type": 1,
@@ -8541,37 +8293,6 @@
         {
           "name": "SA_PASSWORD",
           "label": "SA password"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "SQL Server",
-      "description": "Microsoft SQL Server Developer for Windows containers",
-      "categories": [
-        "database"
-      ],
-      "platform": "windows",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
-      "image": "microsoft/mssql-server-windows-developer:latest",
-      "ports": [
-        "1433/tcp"
-      ],
-      "env": [
-        {
-          "name": "ACCEPT_EULA",
-          "default": "Y",
-          "preset": true
-        },
-        {
-          "name": "sa_password",
-          "label": "SA password"
-        }
-      ],
-      "volumes": [
-        {
-          "container": "C:/temp/"
         }
       ]
     },
@@ -10452,28 +10173,6 @@
         }
       ],
       "restart_policy": "unless-stopped"
-    },
-    {
-      "type": 2,
-      "title": "WordPress",
-      "description": "WordPress setup with a MySQL database",
-      "note": "Deploys a WordPress instance connected to a MySQL database.",
-      "categories": [
-        "CMS"
-      ],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/wordpress/docker-stack.yml"
-      },
-      "env": [
-        {
-          "name": "MYSQL_DATABASE_PASSWORD",
-          "label": "Database root password",
-          "description": "Password used by the MySQL root user."
-        }
-      ]
     },
     {
       "type": 3,
